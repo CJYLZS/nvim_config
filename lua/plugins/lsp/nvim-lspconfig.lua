@@ -5,7 +5,7 @@ return {
     config = function()
         local lspconfig = require("lspconfig")
         local on_attach = function(client, bufnr)
-            require("plugins.lsp.lsp_signature").on_attach(client, bufnr) -- Note: add in lsp client on-attach
+            -- require("plugins.lsp.lsp_signature").on_attach(client, bufnr) -- Note: add in lsp client on-attach
         end
         if vim.fn.executable("pylsp") == 1 then
             -- python-lsp-server

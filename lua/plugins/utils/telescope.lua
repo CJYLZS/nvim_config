@@ -57,6 +57,8 @@ return {
         { "<leader>/", "<cmd>Telescope live_grep<CR>", desc = "live grep" },
         { "<leader>r", recentFiles, desc = "Recent" },
         { "<leader>f", ":Telescope find_files <CR>", desc = "find files" },
+        { "gd", function() require("telescope.builtin").lsp_definitions({jump_type = 'split', reuse_win = true }) end, desc = "split goto definitions" },
+        { "gr", function() require("telescope.builtin").lsp_references({}) end, desc = "goto references" },
     },
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()

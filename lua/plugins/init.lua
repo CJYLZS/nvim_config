@@ -20,10 +20,9 @@ local plugins = {
     require("plugins.ui.neo-tree"),
     require("plugins.ui.toggleterm"),
     require("plugins.ui.noice"),
-    require("plugins.code.aerial"),
     require("plugins.code.comment"),
     require("plugins.code.indent-blankline"),
-    require("plugins.code.lightspeed"),
+    require("plugins.code.leap"),
     require("plugins.code.luasnip"),
     require("plugins.code.nvim-autopairs"),
     require("plugins.code.nvim-cmp"),
@@ -31,7 +30,6 @@ local plugins = {
     require("plugins.code.nvim-surround"),
     require("plugins.code.nvim-treesitter"),
     require("plugins.code.treesitter-playground"),
-    require("plugins.code.nvim-ufo"),
     require("plugins.lsp.lsp_signature"),
     require("plugins.lsp.nvim-lspconfig"),
     require("plugins.utils.auto-session"),
@@ -41,7 +39,6 @@ local plugins = {
     require("plugins.utils.which-key"),
     require("plugins.utils.nvim-osc52"),
     require("plugins.utils.nvim-bufsurf"),
-    require("plugins.utils.telescope-file-browser"),
     require("plugins.utils.nvim-spectre"),
 }
 local opts = {}

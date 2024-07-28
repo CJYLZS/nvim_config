@@ -24,8 +24,9 @@ vim.keymap.set("i", "<C-s>", "<Cmd>w<CR>")
 
 -- lsp
 vim.keymap.set("n", "<leader>cl", "<cmd>LspInfo<cr>", { silent = true })
-vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { silent = true })
-vim.keymap.set("n", "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end)
+-- vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { silent = true })
+-- vim.keymap.set("n", "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end)
+-- vim.keymap.set("n", "gD", function() require("telescope.builtin").lsp_definitions({ reuse_win = false }) end)
 
 --       { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
 --       { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
