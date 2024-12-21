@@ -3,6 +3,7 @@ local options = {
     relativenumber = true,
     -- paste = true, -- set true will effect nvim-cmp enter completion
     shiftwidth = 4,
+    fileencodings= 'utf-8,gbk,ucs-bom,cp936',
     tabstop = 4,
     softtabstop = 4,
     smarttab = true,
