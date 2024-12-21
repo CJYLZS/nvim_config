@@ -40,6 +40,8 @@ local plugins = {
     require("plugins.utils.nvim-osc52"),
     require("plugins.utils.nvim-bufsurf"),
     require("plugins.utils.nvim-spectre"),
+    require("plugins.code.copilot"),
+    require("plugins.code.copilot-cmp"),
 }
 local opts = {}
 require("lazy").setup({ plugins, opts })
