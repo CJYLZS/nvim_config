@@ -5,10 +5,12 @@ return {
     event = "InsertEnter",
     opts = {
         suggestion = {
-            enabled = false,
+            enabled = true,
             auto_trigger = true,
             keymap = {
-                accept = false, -- handled by nvim-cmp / blink.cmp
+                accept = false,
+                accept_word = "<M-l>",
+                accept_line = "<C-l>",
                 next = "<M-]>",
                 prev = "<M-[>",
             },

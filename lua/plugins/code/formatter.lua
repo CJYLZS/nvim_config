@@ -19,11 +19,16 @@ end
 local function go_formatter(filepath)
     system("gofmt -s -w " .. vim.fn.shellescape(filepath))
 end
+local function sql_formatter(filepath)
+    system("sqlfmt " .. vim.fn.shellescape(filepath))
+end
+
 local formatter_table = {
     py = py_formatter,
     lua = lua_formatter,
     sh = sh_formatter,
     go = go_formatter,
+    sql = sql_formatter,
 }
 
 function GetFileExtension(filepath)
