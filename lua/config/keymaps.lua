@@ -6,16 +6,16 @@ vim.g.maplocalleader = " "
 vim.cmd("nnoremap \\ :")
 
 -- Better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
-vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
-vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
-vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
+vim.keymap.set("n", "<C-h>", "<C-w>h", {})
+vim.keymap.set("n", "<C-j>", "<C-w>j", {})
+vim.keymap.set("n", "<C-k>", "<C-w>k", {})
+vim.keymap.set("n", "<C-l>", "<C-w>l", {})
 
 -- Better window resizing
-vim.api.nvim_set_keymap("n", "<C-Up>", ":resize +2<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-Down>", ":resize -2<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -2<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +2<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<M-j>", ":resize -2<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<M-k>", ":resize +2<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<M-l>", ":vertical resize +5<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<M-h>", ":vertical resize -5<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>q", "<Cmd>qa<CR>")
 vim.keymap.set("n", "<leader>Q", "<Cmd>qa!<CR>")
@@ -86,14 +86,12 @@ vim.keymap.set("n", "<leader>G", function()
     local dirname = vim.fs.dirname(bufname)
     for _, session in ipairs(get_sessions()) do
         if string.sub(dirname, 1, string.len(session)) == session then
-            vim.cmd(
-                'lua require("auto-session").RestoreSession(\'' .. session .. "')"
-            )
+            vim.cmd('lua require("auto-session").RestoreSession(\'' .. session .. "')")
             return
         end
     end
     vim.cmd("cd " .. dirname)
-end, {desc='attach or cd to file path'})
+end, { desc = "attach or cd to file path" })
 
 function _G.set_terminal_keymaps()
     local opts = { buffer = 0 }

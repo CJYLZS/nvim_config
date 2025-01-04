@@ -20,6 +20,7 @@ local plugins = {
     require("plugins.ui.neo-tree"),
     require("plugins.ui.toggleterm"),
     require("plugins.ui.noice"),
+    require("plugins.ui.windows"),
     require("plugins.code.comment"),
     require("plugins.code.indent-blankline"),
     require("plugins.code.leap"),
@@ -41,7 +42,7 @@ local plugins = {
     require("plugins.utils.nvim-bufsurf"),
     require("plugins.utils.nvim-spectre"),
     require("plugins.code.copilot"),
-    -- require("plugins.code.copilot-cmp"),
+    require("plugins.code.copilot-cmp"),
 }
 local opts = {}
 require("lazy").setup({ plugins, opts })
